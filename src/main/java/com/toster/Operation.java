@@ -7,7 +7,7 @@ public enum Operation {
 
     private final String description;
 
-    Operation(String description) {
+    Operation(final String description) {
         this.description = description;
     }
 
