@@ -30,7 +30,7 @@ public class RateService {
         return amount.amountValue().multiply(getRateRelativeToEur(amount.currency()));
     }
 
-    private BigDecimal getRateRelativeToEur(Currency currency) {
+    private BigDecimal getRateRelativeToEur(final Currency currency) {
         return switch (currency) {
             case USD -> BigDecimal.valueOf(0.85);
             case PLN -> BigDecimal.valueOf(0.24);

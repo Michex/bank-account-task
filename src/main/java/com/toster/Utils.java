@@ -15,7 +15,7 @@ public class Utils {
                         statement.account().balance().amountValue()));
     }
 
-    public static boolean compareBigDecimalsEquals(BigDecimal a, BigDecimal b) {
+    public static boolean compareBigDecimalsEquals(final BigDecimal a, final BigDecimal b) {
         return a.compareTo(b) == 0;
     }
 

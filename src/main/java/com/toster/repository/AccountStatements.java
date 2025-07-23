@@ -10,7 +10,7 @@ public class AccountStatements implements AccountStatementRepository {
     private final List<AccountStatement> accountStatements = new ArrayList<>();
 
     @Override
-    public void addAccountStatement(AccountStatement accountStatement) {
+    public void addAccountStatement(final AccountStatement accountStatement) {
         accountStatements.add(accountStatement);
     }
 
@@ -23,8 +23,8 @@ public class AccountStatements implements AccountStatementRepository {
     }
 
     @Override
-    public BigDecimal getBalance(String accountId) {
-        List<AccountStatement> statements = getCustomerAccountStatementsSortByRecent(accountId);
+    public BigDecimal getBalance(final String id) {
+        final List<AccountStatement> statements = getCustomerAccountStatementsSortByRecent(id);
         if (statements.isEmpty()) {
             return BigDecimal.ZERO;
         }
